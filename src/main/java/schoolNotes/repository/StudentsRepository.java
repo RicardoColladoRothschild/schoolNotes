@@ -1,14 +1,15 @@
 package schoolNotes.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import schoolNotes.model.Student;
 
 import java.util.List;
 
 @Repository
-public interface StudentsRepository {
+public interface StudentsRepository extends JpaRepository<Student, Long> {
     
-    List<Student> findByName(String name);
-    List<Student> findByAgeGreaterThan(int age);
-    List<Student> findBySubject(String subjectName);
+    public List<Student> findByName(String name);
+    public List<Student> findByCareer(String career);
+    public List<Student> findBySubject(String subjectName);
 }
