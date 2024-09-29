@@ -1,11 +1,14 @@
 package schoolNotes.repository;
 
 import org.springframework.stereotype.Repository;
+import schoolNotes.model.Student;
+
+import java.util.List;
 
 @Repository
 public interface StudentsRepository {
     
-    List<Students> findByName(String name);
-    List<Students> findByAgeGreaterThan(int age);
-    List<Students> findBySubject(String subjectName);
+    List<Student> findByName(String name);
+    List<Student> findByAgeGreaterThan(int age);
+    List<Student> findBySubject(String subjectName);
 }

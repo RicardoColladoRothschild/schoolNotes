@@ -14,6 +14,9 @@ public class Subject {
         private String subjectName;
         private String subjectCode;
 
+
+
+    private List<String> careers;
         @ManyToMany(mappedBy = "subjects")
         private List<Teacher> teachers;
 
@@ -50,7 +53,13 @@ public class Subject {
             this.teachers = t;
         }
 
+            public List<String> getCareers() {
+                return careers;
+            }
 
+            public void setCareers(List<String> careers) {
+                this.careers = careers;
+            }
         @Override
         public String toString(){
             return this.subjectName+" | "+this.subjectCode;
