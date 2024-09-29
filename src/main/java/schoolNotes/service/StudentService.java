@@ -34,4 +34,8 @@ public class StudentService {
             throw new RuntimeException(e);
         }
     }
+
+    public List<Student> findStudentBySubject(String subject){
+        return studentRepository.findBySubject(subject);
+    }
 }
