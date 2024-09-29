@@ -59,12 +59,13 @@ public class Teacher {
     @Override
     public String toString(){
 
-        String subjectListed = "";
+        StringBuilder subjectListed = new StringBuilder();
         for(Subject subject: this.subjects){
-            subjectListed+="SubjectName: "+subject+"\n";
+            subjectListed.append("SubjectName: ").append(subject.toString()).append("\n");
         }
         return "Teacher Name: "+this.lastName + ", "+this.lastName+"\n"
                 +"Email: "+this.email+"\n"
-                +
+                +"***Subject list from this teacher****"+"\n"
+                +subjectListed;
     }
 }
